@@ -1,6 +1,10 @@
 <?php
 
+use App\Http\Controllers\KelahiranController;
+use App\Http\Controllers\KematianController;
+use App\Http\Controllers\LandingHomeController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PwaHomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,9 +18,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('layouts.pwa.masterpwa');
+// });
+
+Route::get('/', [PwaHomeController::class, 'index']);
+Route::resource('kelahiran', KelahiranController::class);
+Route::resource('kematian', KematianController::class);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
