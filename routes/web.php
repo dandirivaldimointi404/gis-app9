@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\KelahiranController;
 use App\Http\Controllers\KematianController;
-use App\Http\Controllers\LandingHomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PwaHomeController;
 use Illuminate\Support\Facades\Route;
@@ -18,22 +17,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('layouts.pwa.masterpwa');
-// });
+Route::get('/', function () {
+    return view('auth.login');
+});
 
-Route::get('/', [PwaHomeController::class, 'index']);
+
+
+Route::get('pwahome', [PwaHomeController::class]);
 Route::resource('kelahiran', KelahiranController::class);
 Route::resource('kematian', KematianController::class);
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
+
+// Route::middleware('auth')->group(function () {
+//     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+//     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+//     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+// });
 
 require __DIR__.'/auth.php';
