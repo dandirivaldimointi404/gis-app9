@@ -134,8 +134,9 @@ class DKelurahanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Kelurahan $dkelurahan)
     {
-        //
+        $dkelurahan->delete();
+        return redirect()->route('dkelurahan.index')->with('success', 'Pengguna berhasil dihapus.');
     }
 }
