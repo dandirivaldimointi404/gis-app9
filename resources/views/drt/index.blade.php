@@ -38,7 +38,7 @@
                                                 <td>{{$item->longitude}}</td>
                                                 <td class="text-center">
                                                     <form action="{{ route('drt.destroy', $item->kd_rt)}}" method="POST">
-                                                        <a href="{{ route('drt.update',$item->kd_rt)}}" class="btn btn-rounded btn-outline-primary">Edit
+                                                        <a href="{{ route('drt.edit',$item->kd_rt)}}" class="btn btn-rounded btn-outline-primary">Edit
                                                             Data</a>
                                                         @csrf
                                                         @method('DELETE')

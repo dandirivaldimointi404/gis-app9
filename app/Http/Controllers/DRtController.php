@@ -68,9 +68,10 @@ class DRtController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Rt $drt)
     {
-        //
+        $kelurahan = Kelurahan::all();
+        return view('drt.edit', compact('drt','kelurahan'));
     }
 
     /**
