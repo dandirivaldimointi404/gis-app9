@@ -37,17 +37,14 @@ class DKelurahanController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-
             'kd_kelurahan' => 'required|unique:tb_kelurahan',
             'no_kelurahan' => 'required',
             'nama_kelurahan' => 'required',
             'latitude' => 'required',
             'longitude' => 'required',
-            'geojson' => 'required',
-
-
+            'geojson' => 'required|file', 
         ]);
-
+    
         if ($geojson = $request->file('geojson')) {
             echo 'File Name: ' . $geojson->getClientOriginalName();
             echo '<br>';
@@ -58,13 +55,25 @@ class DKelurahanController extends Controller
             echo 'File Size: ' . $geojson->getSize();
             echo '<br>';
             echo 'File Mime Type: ' . $geojson->getMimeType();
-            $tujuan_upload = 'post-images';
-            $validatedData['geojson'] = $geojson->storeAS($tujuan_upload, $geojson->getClientOriginalName());
+    
+            // Define the upload path relative to the public directory
+            $uploadPath = public_path('post-images');
+            // Ensure the directory exists
+            if (!file_exists($uploadPath)) {
+                mkdir($uploadPath, 0777, true);
+            }
+            // Move the file to the defined path with its original name
+            $fileName = $geojson->getClientOriginalName();
+            $geojson->move($uploadPath, $fileName);
+            // Update the geojson field with the public path
+            $validatedData['geojson'] = 'post-images/' . $fileName;
         }
-
+    
         Kelurahan::create($validatedData);
         return redirect()->route('dkelurahan.index')->with('success', 'Data berhasil ditambahkan');
     }
+    
+
 
     /**
      * Display the specified resource.
