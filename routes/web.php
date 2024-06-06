@@ -1,7 +1,14 @@
 <?php
 
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\DKelurahanController;
+use App\Http\Controllers\DPenggunaController;
+use App\Http\Controllers\DPertumbuhanController;
+use App\Http\Controllers\DRtController;
 use App\Http\Controllers\KelahiranController;
 use App\Http\Controllers\KematianController;
+use App\Http\Controllers\LsebaranController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PwaHomeController;
 use Illuminate\Support\Facades\Route;
@@ -17,15 +24,48 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::get('/', function () {
+//     return view('auth.login');
+// });
+
+// Route::get('/', function () {
+//     return view('layouts.panel.master');
+// });
+
 Route::get('/', function () {
-    return view('auth.login');
+    return view('layouts.landing.master');
 });
 
+Route::resource('lsebaran', LsebaranController::class);
 
 
-Route::get('pwahome', [PwaHomeController::class]);
+//PWA
+Route::get('pwahome', [PwaHomeController::class])->name('pwahome');
 Route::resource('kelahiran', KelahiranController::class);
 Route::resource('kematian', KematianController::class);
+
+//ADMIN
+Route::get('auth', [AuthenticatedSessionController::class]);
+Route::get('dberanda', [DashboardController::class, 'index'])->name('dberanda.index');
+Route::resource('dkelurahan', DKelurahanController::class);
+Route::resource('drt', DRtController::class);
+Route::resource('dpertumbuhan', DPertumbuhanController::class);
+Route::resource('dpengguna', DPenggunaController::class);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 Route::get('/dashboard', function () {

@@ -5,8 +5,20 @@
             <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Tivo</a> -->
 
             <!-- Image Logo -->
-            <a class="navbar-brand logo-image" href="index.html"><img
-                    src="{{ asset('assets_landing/images/logo.png') }}" /></a>
+            <div class="row" style="display: flex; align-items: center;">
+                <div class="col-sm-2">
+                    <a class="navbar-brand logo-image" href="index.html">
+                        <img src="{{ asset('assets_landing/images/logokotatimur.png') }}"
+                            style="width: 40px; height:auto;" />
+                    </a>
+                </div>
+                <div class="col-sm-10">
+                    <p style="margin: 0; color: white; font-weight: bold;">Kecamatan Kota Timur</p>
+                    <p style="margin: 0; color: white; font-weight: bold;">Melayani Dengan Sepenuh Hati</p>
+                </div>
+
+            </div>
+
 
             <!-- Mobile Menu Toggle Button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
@@ -22,14 +34,14 @@
                         <a class="nav-link page-scroll" href="#header">HOME <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#features">SEBARAN</a>
+                        <a class="nav-link page-scroll" href="{{ route('lsebaran.index') }}">SEBARAN</a>
                     </li>
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="nav-link page-scroll" href="#details">PRAVALENSI</a>
-                    </li>
+                    </li> --}}
                 </ul>
                 <span class="nav-item">
-                    <a class="btn-outline-sm" href="log-in.html">LOG IN</a>
+                    <a class="btn-outline-sm" href="{{ route('login') }}">LOG IN</a>
                 </span>
             </div>
         </div>
@@ -48,7 +60,7 @@
                             <h1>Ayo Cegah Stunting !</h1>
                             <p class="p-large">Lihat sekelilingmu di wilayah kabupaten Pohuwato lokasi Lokus Stunting
                             </p>
-                            <a class="btn-solid-lg page-scroll" href="sign-up.html">SIGN UP</a>
+                            {{-- <a class="btn-solid-lg page-scroll" href="sign-up.html">SIGN UP</a> --}}
                         </div>
                         <!-- end of text-container -->
                     </div>

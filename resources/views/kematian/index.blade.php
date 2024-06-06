@@ -34,10 +34,10 @@
                     </a>
                 </div>
 
-                @foreach ($kelahiran as $item)
+                @foreach ($kematian as $item)
                     <div class="collection ui-collection">
                         <div class="collection-item avatar" style="display: flex; align-items: center;">
-                            <a href="{{ route('kelahiran.show', $item->id_kelahiran) }}"
+                            <a href="{{ route('kelahiran.show', $item->id_kematian) }}"
                                 style="text-decoration: none; color: rgba(0, 0, 0, 0.582);">
                                 <img alt="image" src="{{ asset('assets_pwa/assets/images/user-icon.png') }}"
                                     class="circle">
@@ -47,14 +47,14 @@
                             <div style="flex-grow: 1;">
                             </div>
                             <div>
-                                <form action="{{ route('kelahiran.destroy', $item->id_kelahiran) }}" method="POST">
-                                    <a href="{{ route('kelahiran.edit', $item->id_kelahiran) }}"
+                                <form action="{{ route('kelahiran.destroy', $item->id_kematian) }}" method="POST">
+                                    <a href="{{ route('kelahiran.edit', $item->id_kematian) }}"
                                         class="btn-small waves-effect waves-light lighten-1"><i
                                             class="mdi mdi-square-edit-outline"></i></a>
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="waves-effect waves-light btn-small red lighten-1"
-                                        data-id="{{ $item->id_kelahiran }}">
+                                        data-id="{{ $item->id_kematian }}">
                                         <i class="mdi mdi-delete"></i>
                                     </button>
                                 </form>

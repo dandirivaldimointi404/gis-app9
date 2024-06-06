@@ -9,6 +9,7 @@ use Illuminate\Contracts\Support\ValidatedData;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Facades\Auth;
 
 class KelahiranController extends Controller
 {
@@ -19,9 +20,15 @@ class KelahiranController extends Controller
      */
     public function index()
     {
-        $kelahiran = Kelahiran::all(); 
+        $user = Auth::user();
+        $rt_kd = $user->rt_kd;
+        $kelahiran = Kelahiran::with('rt')
+            ->where('rt_kd', $rt_kd)
+            ->paginate(10); 
+
         return view('kelahiran.index', compact('kelahiran'));
     }
+
 
 
     /**
@@ -54,10 +61,12 @@ class KelahiranController extends Controller
             'status' => '',
             'pendidikan' => '',
             'alamat' => '',
+            'rt_kd' => '',
         ]);
 
 
         $ValidatedData['tgl_lahir'] = Carbon::createFromFormat('m/d/Y', $ValidatedData['tgl_lahir'])->format('Y-m-d');
+        $ValidatedData['rt_kd'] = Auth::user()->rt_kd;
 
         Kelahiran::create($ValidatedData);
         return redirect()->route('kelahiran.index')->with('success', 'Data Berhasil Tersimpan');

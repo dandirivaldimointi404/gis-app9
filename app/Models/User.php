@@ -22,7 +22,13 @@ class User extends Authenticatable
         'username',
         'password',
         'level',
+        'rt_kd'
     ];
+
+    public function rt()
+    {
+        return $this->belongsTo(Rt::class, 'rt_kd', 'kd_rt');
+    }
 
     /**
      * The attributes that should be hidden for serialization.

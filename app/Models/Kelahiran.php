@@ -22,6 +22,13 @@ class Kelahiran extends Model
         'status',
         'pendidikan',
         'alamat',
+        'rt_kd'
     ];
     public $timestamps = false;
+
+    public function rt()
+    {
+        return $this->belongsTo(Rt::class, 'rt_kd', 'kd_rt');
+    }
+
 }
