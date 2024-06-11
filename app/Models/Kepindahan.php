@@ -11,21 +11,13 @@ class Kepindahan extends Model
     protected $table = 'tb_kepindahan';
     protected $fillable = [
         'nama_lengkap',
-        'tempat_lahir',
-        'tgl_lahir',
-        'goldar',
-        'agama',
-        'status',
-        'pendidikan',
-        'no_kk',
         'alamat',
         'rt_kd',
-        'pindah_ke',
         'tgl_pindah',
-        'alasan_pindah',
         'jenis_kelamin',
+        'nik'
     ];
-    public $timestamps = false;
+    // public $timestamps = false;
 
     public function rt()
     {

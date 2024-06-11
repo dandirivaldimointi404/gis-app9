@@ -8,6 +8,8 @@ use App\Http\Controllers\DPertumbuhanController;
 use App\Http\Controllers\DRtController;
 use App\Http\Controllers\KelahiranController;
 use App\Http\Controllers\KematianController;
+use App\Http\Controllers\KepindahanController;
+use App\Http\Controllers\LoginAdminController;
 use App\Http\Controllers\LsebaranController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PwaHomeController;
@@ -43,6 +45,7 @@ Route::resource('lsebaran', LsebaranController::class);
 Route::get('pwahome', [PwaHomeController::class])->name('pwahome');
 Route::resource('kelahiran', KelahiranController::class);
 Route::resource('kematian', KematianController::class);
+Route::resource('kepindahan', KepindahanController::class);
 
 //ADMIN
 Route::get('auth', [AuthenticatedSessionController::class]);
@@ -52,19 +55,13 @@ Route::resource('drt', DRtController::class);
 Route::resource('dpertumbuhan', DPertumbuhanController::class);
 Route::resource('dpengguna', DPenggunaController::class);
 
+Route::get('/loginadmin', [LoginAdminController::class, 'index'])->name('loginadmin')->middleware('guest');
+Route::post('/loginadmin', [LoginAdminController::class, 'store']);
+Route::post('/keluar', [LoginAdminController::class, 'keluar']);
 
+// routes/web.php
 
-
-
-
-
-
-
-
-
-
-
-
+Route::get('/download-pdf', [DPertumbuhanController::class, 'downloadPDF'])->name('download-pdf');
 
 
 
@@ -78,4 +75,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+// require __DIR__.'/auth.php';

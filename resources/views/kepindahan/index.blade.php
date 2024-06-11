@@ -6,7 +6,7 @@
 
         <div class="container has-pagehead is-pagetitle">
             <div class="section">
-                <h5 class="pagetitle">Data Kematian</h5>
+                <h5 class="pagetitle">Data Pindah</h5>
             </div>
         </div>
 
@@ -29,15 +29,15 @@
 
                 <div class="spacer"></div>
                 <div class="fixed-action-btn">
-                    <a href="{{ route('kematian.create') }}" class="btn-floating btn-large pulse teal lighten-1">
+                    <a href="{{ route('kepindahan.create') }}" class="btn-floating btn-large pulse teal lighten-1">
                         <i class="mdi mdi-plus"></i>
                     </a>
                 </div>
 
-                @foreach ($kematian as $item)
+                @foreach ($kepindahan as $item)
                     <div class="collection ui-collection">
                         <div class="collection-item avatar" style="display: flex; align-items: center;">
-                            <a href="{{ route('kelahiran.show', $item->id_kematian) }}"
+                            <a href="{{ route('kelahiran.show', $item->id) }}"
                                 style="text-decoration: none; color: rgba(0, 0, 0, 0.582);">
                                 <img alt="image" src="{{ asset('assets_pwa/assets/images/user-icon.png') }}"
                                     class="circle">
@@ -47,14 +47,14 @@
                             <div style="flex-grow: 1;">
                             </div>
                             <div>
-                                <form action="{{ route('kematian.destroy', $item->id_kematian) }}" method="POST">
-                                    <a href="{{ route('kematian.edit', $item->id_kematian) }}"
+                                <form action="{{ route('kelahiran.destroy', $item->id) }}" method="POST">
+                                    <a href="{{ route('kelahiran.edit', $item->id) }}"
                                         class="btn-small waves-effect waves-light lighten-1"><i
                                             class="mdi mdi-square-edit-outline"></i></a>
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="waves-effect waves-light btn-small red lighten-1"
-                                        data-id="{{ $item->id_kematian }}">
+                                        data-id="{{ $item->id }}">
                                         <i class="mdi mdi-delete"></i>
                                     </button>
                                 </form>

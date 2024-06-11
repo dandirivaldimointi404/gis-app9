@@ -41,7 +41,7 @@
                     </li> --}}
                 </ul>
                 <span class="nav-item">
-                    <a class="btn-outline-sm" href="{{ route('login') }}">LOG IN</a>
+                    <a class="btn-outline-sm" href="/loginadmin">LOG IN</a>
                 </span>
             </div>
         </div>

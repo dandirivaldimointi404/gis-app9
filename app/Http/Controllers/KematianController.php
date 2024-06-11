@@ -43,15 +43,10 @@ class KematianController extends Controller
     {
         $ValidatedData = $request->validate([
             'nik' => '',
-            'no_kk' => '',
-            'nama' => '',
+            'nama_lengkap' => '',
             'jenis_kelamin' => '',
-            'tempat_lahir' => '',
             'tgl_kematian' => '',
-            'goldar' => '',
-            'agama' => '',
-            'status' => '',
-            'pendidikan' => '',
+            'nama_kk' => '',
             'alamat' => '',
             'rt_kd' => '',
         ]);
@@ -96,20 +91,20 @@ class KematianController extends Controller
     public function update(Request $request, Kematian $kematian)
     {
         $validatedData = $request->validate([
-            'nik' => 'required|string|max:255',
-            'no_kk' => 'required|string|max:255',
-            'nama' => 'required|string|max:255',
-            'jenis_kelamin' => 'required|string|max:10',
-            'tempat_lahir' => 'required|string|max:255',
-            'tgl_kematian' => 'required|date_format:m/d/Y',
-            'goldar' => 'required|string|max:3',
-            'agama' => 'required|string|max:50',
-            'status' => 'required|string|max:50',
-            'pendidikan' => 'required|string|max:100',
-            'alamat' => 'required|string|max:255',
+            'nik' => '',
+            'nama_lengkap' => '',
+            'jenis_kelamin' => '',
+            'tgl_kematian' => '',
+            'nama_kk' => '',
+            'alamat' => '',
+            'rt_kd' => '',
         ]);
 
-        $validatedData['tgl_kematian'] = Carbon::createFromFormat('m/d/Y', $validatedData['tgl_kematian'])->format('Y-m-d');
+        if (isset($validatedData['tgl_kematian']) && strpos($validatedData['tgl_kematian'], '-') !== false) {
+        } else {
+            $tgl_lahir = Carbon::createFromFormat('m/d/Y', $validatedData['tgl_kematian'])->format('Y-m-d');
+            $validatedData['tgl_kematian'] = $tgl_lahir;
+        }
 
         $validatedData['rt_kd'] = Auth::user()->rt_kd;
         $kematian->update($validatedData);

@@ -12,19 +12,14 @@ class Kematian extends Model
     protected $primaryKey = 'id_kematian';
     protected $fillable = [
         'nik',
-        'no_kk',
         'nama_lengkap',
         'jenis_kelamin',
-        'tempat_lahir',
-        'goldar',
-        'agama',
-        'status',
-        'pendidikan',
         'alamat',
         'rt_kd',
-        'tgl_kematian'
+        'tgl_kematian',
+        'nama_kk'
     ];
-    public $timestamps = false;
+    // public $timestamps = false;
 
     public function rt()
     {

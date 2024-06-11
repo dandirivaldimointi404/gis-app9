@@ -26,10 +26,10 @@
                                           <span>Profile</span></a>
                                   </li>
                                   <hr class="my-2">
-                                  <form id="logout-form" method="POST" action="{{ route('logout') }}">
+                                  <form id="logout-form" method="POST" action="/keluar">
                                       @csrf
                                       <li>
-                                          <a href="{{ route('logout') }}"
+                                          <a href="/keluar"
                                               onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                               <i class="icon-key"></i> <span>Logout</span>
                                           </a>

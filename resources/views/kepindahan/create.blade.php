@@ -8,14 +8,14 @@
 
         <div class="container has-pagehead is-pagetitle">
             <div class="section">
-                <h5 class="pagetitle">Input Data Kelahiran</h5>
+                <h5 class="pagetitle">Input Data Kepindahan</h5>
             </div>
         </div>
 
 
         <div class="spacer"></div>
         <div class="container over z-depth-1">
-            <form action="{{ route('kelahiran.store') }}" method="post">
+            <form action="{{ route('kepindahan.store') }}" method="post">
                 @csrf
                 <div class="section">
                     <div class="row">
@@ -31,8 +31,8 @@
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="mdi mdi-account-outline prefix"></i>
-                            <input id="nama" name="nama" type="text" class="validate">
-                            <label for="nama">Nama</label>
+                            <input id="nama_lengkap" name="nama_lengkap" type="text" class="validate">
+                            <label for="nama_lengkap">Nama</label>
                         </div>
                     </div>
 
@@ -51,8 +51,8 @@
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="mdi mdi-calendar prefix"></i>
-                            <input type="text" id="tgl_lahir" name="tgl_lahir" class="datepicker datepicker7">
-                            <label for="tgl_lahir">Tanggal Lahir</label>
+                            <input type="text" id="tgl_pindah" name="tgl_pindah" class="datepicker datepicker7">
+                            <label for="tgl_pindah">Tanggal Kepindahan</label>
                         </div>
                     </div>
 

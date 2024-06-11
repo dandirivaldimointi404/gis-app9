@@ -51,16 +51,11 @@ class KelahiranController extends Controller
     {
         $ValidatedData = $request->validate([
             'nik' => '',
-            'no_kk' => '',
             'nama' => '',
             'jenis_kelamin' => '',
-            'tempat_lahir' => '',
             'tgl_lahir' => '',
-            'golongan_darah' => '',
-            'agama' => '',
-            'status' => '',
-            'pendidikan' => '',
             'alamat' => '',
+            'nama_kk' => '',
             'rt_kd' => '',
         ]);
 
@@ -106,16 +101,12 @@ class KelahiranController extends Controller
     {
         $validatedData = $request->validate([
             'nik' => '',
-            'no_kk' => '',
             'nama' => '',
             'jenis_kelamin' => '',
-            'tempat_lahir' => '',
             'tgl_lahir' => '',
-            'golongan_darah' => '',
-            'agama' => '',
-            'status' => '',
-            'pendidikan' => '',
             'alamat' => '',
+            'nama_kk' => '',
+            'rt_kd' => '',
         ]);
 
         if (isset($validatedData['tgl_lahir']) && strpos($validatedData['tgl_lahir'], '-') !== false) {

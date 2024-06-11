@@ -12,19 +12,14 @@ class Kelahiran extends Model
     protected $primaryKey = 'id_kelahiran';
     protected $fillable = [
         'nik',
-        'no_kk',
         'nama',
         'jenis_kelamin',
-        'tempat_lahir',
         'tgl_lahir',
-        'golongan_darah',
-        'agama',
-        'status',
-        'pendidikan',
+        'rt_kd',
         'alamat',
-        'rt_kd'
+        'nama_kk',
     ];
-    public $timestamps = false;
+    // public $timestamps = false;
 
     public function rt()
     {

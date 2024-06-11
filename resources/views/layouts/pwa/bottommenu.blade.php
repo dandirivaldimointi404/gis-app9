@@ -16,7 +16,7 @@
             </a>
         </li>
         <li>
-            <a href="sub-screens.html"> <i class="mdi mdi-script"></i>
+            <a href="{{ route('kepindahan.index')}}"> <i class="mdi mdi-script"></i>
                 <span>Pindah</span>
             </a>
         </li>
