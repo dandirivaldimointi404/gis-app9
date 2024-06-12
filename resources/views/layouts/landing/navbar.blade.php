@@ -57,8 +57,8 @@
                 <div class="row">
                     <div class="col-lg-6 col-xl-5">
                         <div class="text-container">
-                            <h1>Ayo Cegah Stunting !</h1>
-                            <p class="p-large">Lihat sekelilingmu di wilayah kabupaten Pohuwato lokasi Lokus Stunting
+                            <h1>Sistem Informasi Geografis!</h1>
+                            <p class="p-large">Lihat Data Pertumbuhan Penduduk Diwilayah Kecamatan Kota Timur
                             </p>
                             {{-- <a class="btn-solid-lg page-scroll" href="sign-up.html">SIGN UP</a> --}}
                         </div>

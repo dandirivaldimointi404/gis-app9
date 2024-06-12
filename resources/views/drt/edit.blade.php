@@ -21,8 +21,9 @@
                                 RT</span></h3>
                             <br>
                             <div class="form-validation">
-                                <form action="{{ route('drt.index') }}" method="post" enctype="multipart/form-data">
+                                <form action="{{ route('drt.update', $drt->kd_rt) }}" method="post" enctype="multipart/form-data">
                                     @csrf
+                                    @method('put')
                                     <div class="form-row">
                                         <div class="form-group row col-md-6 ">
                                             <label class="col-lg-4 col-form-label" for="kd_rt">Kode Rt <span

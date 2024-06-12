@@ -71,7 +71,7 @@ class DRtController extends Controller
     public function edit(Rt $drt)
     {
         $kelurahan = Kelurahan::all();
-        return view('drt.edit', compact('drt','kelurahan'));
+        return view('drt.edit', compact('drt', 'kelurahan'));
     }
 
     /**
@@ -81,10 +81,21 @@ class DRtController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Rt $drt)
     {
-        //
+        $validatedData = $request->validate([
+            'kd_rt' => 'required',
+            'nama_rt' => 'required|string',
+            'kelurahan_kd' => 'required|exists:tb_kelurahan,kd_kelurahan',
+            'latitude' => 'required',
+            'longitude' => 'required',
+        ]);
+
+        $drt->update($validatedData);
+
+        return redirect()->route('drt.index')->with('success', 'Data Berhasil Diperbarui');
     }
+
 
     /**
      * Remove the specified resource from storage.
@@ -92,8 +103,10 @@ class DRtController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Rt $drt)
     {
-        //
+        $drt->delete();
+
+        return redirect()->route('drt.index')->with('success', 'Data Berhasil Dihapus');
     }
 }
