@@ -89,7 +89,7 @@
         <defs>
             <style>
                 .cls-1 {
-                    fill: #5f4def;
+                    fill: #97ec0d;
                 }
             </style>
         </defs>

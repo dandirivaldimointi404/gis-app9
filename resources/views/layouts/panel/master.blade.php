@@ -55,9 +55,9 @@
                     <b class="logo-abbr"><img src="{{ asset('assets_panel/images/logo.png') }}" alt=""> </b>
                     <span class="logo-compact"><img src="{{ asset('assets_panel/images/logo-compact.png') }}"
                             alt=""></span>
-                    <span class="brand-title">
+                    {{-- <span class="brand-title">
                         <img src="{{ asset('assets_panel/images/logo-text.png') }}" alt="">
-                    </span>
+                    </span> --}}
                 </a>
             </div>
         </div>

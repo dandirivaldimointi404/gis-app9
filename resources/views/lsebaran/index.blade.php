@@ -166,25 +166,24 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="footer-col first">
-                        <h4>About Tivo</h4>
-                        <p class="p-small">We're passionate about offering some of the best business growth services
-                            for start more words</p>
+                        <h4>Lokasi Kantor</h4>
+                        <p class="p-small">Jl. Taman Bunga II Kel. Moodu Kec. Kota Timur Kota Gorontalo</p>
                     </div>
                 </div> <!-- end of col -->
                 <div class="col-md-4">
                     <div class="footer-col middle">
-                        <h4>Important Links</h4>
+                        <h4>email</h4>
                         <ul class="list-unstyled li-space-lg p-small">
                             <li class="media">
                                 <i class="fas fa-square"></i>
-                                <div class="media-body">Our business partners <a class="white"
-                                        href="#your-link">startupguide.com</a></div>
+                                <div class="media-body">kotim.gorontalo1@gmail.com<a class="white"
+                                        href="#your-link"></a></div>
                             </li>
                             <li class="media">
                                 <i class="fas fa-square"></i>
-                                <div class="media-body">Read our <a class="white" href="terms-conditions.html">Terms
-                                        & Conditions</a>, <a class="white" href="privacy-policy.html">Privacy
-                                        Policy</a></div>
+                                <div class="media-body">Link <a class="white"
+                                        href="terms-conditions.html">https://kec-kotatimur.gorontalokota.go.id</a>, <a
+                                        class="white" href="privacy-policy.html"></a></div>
                             </li>
                         </ul>
                     </div>
@@ -195,13 +194,13 @@
                         <ul class="list-unstyled li-space-lg p-small">
                             <li class="media">
                                 <i class="fas fa-map-marker-alt"></i>
-                                <div class="media-body">22 Innovative, San Francisco, CA 94043, US</div>
+                                <div class="media-body">Mari Sukseskan E-Goverment di Kota Gorontalo</div>
                             </li>
                             <li class="media">
                                 <i class="fas fa-envelope"></i>
                                 <div class="media-body"><a class="white"
-                                        href="mailto:contact@Tivo.com">contact@Tivo.com</a> <i
-                                        class="fas fa-globe"></i><a class="white" href="#your-link">www.Tivo.com</a>
+                                        href="mailto:contact@Tivo.com">kotim.gorontalo1@gmail.com</a> <i
+                                        class="fas fa-globe"></i><a class="white" href="#your-link">Gorontalo</a>
                                 </div>
                             </li>
                         </ul>
@@ -217,8 +216,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <p class="p-small">Copyright © 2020 <a href="https://inovatik.com">Template by Inovatik</a><br>
-                        Distributed By <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
+                    <p class="p-small">Copyright © 2024 <a href="https://inovatik.com">Kecamatan Kota Timur</a><br>
+                        Kota Gorontalo <a href="https://themewagon.com" target="_blank">Provinsi Gorontalo</a>
                     </p>
                 </div> <!-- end of col -->
             </div> <!-- enf of row -->

@@ -24,7 +24,7 @@ class KelahiranController extends Controller
         $rt_kd = $user->rt_kd;
         $kelahiran = Kelahiran::with('rt')
             ->where('rt_kd', $rt_kd)
-            ->paginate(10); 
+            ->paginate(10);
 
         return view('kelahiran.index', compact('kelahiran'));
     }
@@ -55,7 +55,7 @@ class KelahiranController extends Controller
             'jenis_kelamin' => '',
             'tgl_lahir' => '',
             'alamat' => '',
-            'nama_kk' => '',
+            'nama_kepala_keluarga' => '',
             'rt_kd' => '',
         ]);
 
@@ -105,7 +105,7 @@ class KelahiranController extends Controller
             'jenis_kelamin' => '',
             'tgl_lahir' => '',
             'alamat' => '',
-            'nama_kk' => '',
+            'nama_kepala_keluarga' => '',
             'rt_kd' => '',
         ]);
 

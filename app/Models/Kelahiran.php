@@ -19,11 +19,10 @@ class Kelahiran extends Model
         'alamat',
         'nama_kk',
     ];
-    // public $timestamps = false;
+    public $timestamps = false;
 
     public function rt()
     {
         return $this->belongsTo(Rt::class, 'rt_kd', 'kd_rt');
     }
-
 }

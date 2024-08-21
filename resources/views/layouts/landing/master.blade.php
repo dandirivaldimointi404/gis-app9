@@ -66,33 +66,27 @@
                         <div class="swiper-container image-slider">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <img class="img-fluid"
-                                        src="{{ asset('assets_landing/images/customer-logo-1.png') }}"
+                                    <img class="img-fluid" src="{{ asset('assets_landing/images/logokotatimur.png') }}"
                                         alt="alternative" />
                                 </div>
                                 <div class="swiper-slide">
-                                    <img class="img-fluid"
-                                        src="{{ asset('assets_landing/images/customer-logo-2.png') }}"
+                                    <img class="img-fluid" src="{{ asset('assets_landing/images/121.png') }}"
                                         alt="alternative" />
                                 </div>
                                 <div class="swiper-slide">
-                                    <img class="img-fluid"
-                                        src="{{ asset('assets_landing/images/customer-logo-3.png') }}"
+                                    <img class="img-fluid" src="{{ asset('assets_landing/images/alur.png') }}"
                                         alt="alternative" />
                                 </div>
                                 <div class="swiper-slide">
-                                    <img class="img-fluid"
-                                        src="{{ asset('assets_landing/images/customer-logo-4.png') }}"
+                                    <img class="img-fluid" src="{{ asset('assets_landing/images/unisannn.png') }}"
                                         alt="alternative" />
                                 </div>
                                 <div class="swiper-slide">
-                                    <img class="img-fluid"
-                                        src="{{ asset('assets_landing/images/customer-logo-5.png') }}"
+                                    <img class="img-fluid" src="{{ asset('assets_landing/images/bps.svg') }}"
                                         alt="alternative" />
                                 </div>
                                 <div class="swiper-slide">
-                                    <img class="img-fluid"
-                                        src="{{ asset('assets_landing/images/customer-logo-6.png') }}"
+                                    <img class="img-fluid" src="{{ asset('assets_landing/images/prov.png') }}"
                                         alt="alternative" />
                                 </div>
                             </div>
